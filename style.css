@@ -7,6 +7,7 @@ body {
     color: #023e8a; /* Azul oscuro para el texto */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
 /* Encabezado */
@@ -88,4 +89,78 @@ footer {
     padding: 1em 0;
     font-size: 0.9em;
     border-top: 5px solid #023e8a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Burbujas */
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background-color: rgba(173, 232, 244, 0.8);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: bubbleUp 10s infinite;
+}
+
+.bubble:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(2) {
+    width: 25px;
+    height: 25px;
+    left: 25%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(3) {
+    width: 15px;
+    height: 15px;
+    left: 40%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    left: 55%;
+    animation-duration: 12s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    left: 70%;
+    animation-duration: 7s;
+    animation-delay: 5s;
+}
+
+.bubble:nth-child(6) {
+    width: 25px;
+    height: 25px;
+    left: 85%;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+
+@keyframes bubbleUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-600px);
+        opacity: 0;
+    }
 }
