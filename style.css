@@ -1,166 +1,103 @@
-/* style.css */
-
 /* Fondo */
 body {
-    background-color: #e0f7fa; /* Azul claro, similar al color del agua */
+    background-color: #e0f7fa; /* Azul claro de respaldo */
+    background-image: url('ruta/al/gif_del_mar.gif'); /* Reemplaza con la ruta de tu GIF */
+    background-size: cover; /* Asegura que el GIF cubra toda la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
-    color: #023e8a; /* Azul oscuro para el texto */
+    color: #023e8a;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-x: hidden;
+}
+
+/* Efecto de opacidad para hacer el texto más legible sobre el GIF */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2em auto;
+    max-width: 900px;
 }
 
 /* Encabezado */
 header {
-    background-color: #0077b6; /* Azul marino */
-    color: #ffffff;
     text-align: center;
-    padding: 2em 0;
-    border-bottom: 5px solid #023e8a;
+    padding: 1em 0;
 }
 
 header h1 {
     font-size: 2.5em;
+    color: #0077b6;
     margin: 0;
 }
 
 header p {
     font-size: 1.2em;
     font-style: italic;
-    margin-top: 0.5em;
+    color: #023e8a;
 }
 
 /* Sección de experiencia */
 #experiencia, #habilidades {
     padding: 2em;
-    margin: 0 auto;
-    max-width: 800px;
-    background-color: #caf0f8; /* Azul claro con un toque suave */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1em;
-}
-
-h2 {
-    color: #023e8a;
-    border-bottom: 2px solid #0077b6;
-    padding-bottom: 0.5em;
     margin-bottom: 1em;
 }
 
 /* Estilo de los proyectos */
 .proyecto {
-    background-color: #90e0ef; /* Azul claro inspirado en el mar */
+    background-color: #90e0ef;
     padding: 1em;
     margin-bottom: 1em;
     border-left: 5px solid #0077b6;
     border-radius: 8px;
 }
 
-.proyecto h3 {
-    margin-top: 0;
-    color: #0077b6;
-}
-
-.proyecto p {
-    margin: 0.5em 0;
-    color: #023e8a;
-}
-
-/* Sección de habilidades */
-#habilidades ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#habilidades li {
-    background-color: #ade8f4; /* Azul pastel para cada habilidad */
-    margin: 0.5em 0;
-    padding: 0.8em;
-    border-radius: 5px;
-    color: #023e8a;
-}
-
 /* Pie de página */
 footer {
-    background-color: #0077b6;
-    color: #ffffff;
     text-align: center;
     padding: 1em 0;
+    color: #ffffff;
     font-size: 0.9em;
-    border-top: 5px solid #023e8a;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Burbujas */
+/* Burbuja animada */
 .bubble {
     position: absolute;
     bottom: -100px;
-    background-color: rgba(173, 232, 244, 0.8);
+    background-color: rgba(173, 232, 244, 0.6);
     border-radius: 50%;
-    opacity: 0.6;
     animation: bubbleUp 10s infinite;
 }
 
-.bubble:nth-child(1) {
+.bubble:nth-child(1) { /* Variaciones para efecto natural */
     width: 20px;
     height: 20px;
-    left: 10%;
+    left: 15%;
     animation-duration: 8s;
-    animation-delay: 2s;
 }
 
 .bubble:nth-child(2) {
     width: 25px;
     height: 25px;
-    left: 25%;
+    left: 35%;
     animation-duration: 10s;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 .bubble:nth-child(3) {
     width: 15px;
     height: 15px;
-    left: 40%;
+    left: 50%;
     animation-duration: 6s;
     animation-delay: 4s;
 }
 
-.bubble:nth-child(4) {
-    width: 30px;
-    height: 30px;
-    left: 55%;
-    animation-duration: 12s;
-    animation-delay: 1s;
-}
-
-.bubble:nth-child(5) {
-    width: 20px;
-    height: 20px;
-    left: 70%;
-    animation-duration: 7s;
-    animation-delay: 5s;
-}
-
-.bubble:nth-child(6) {
-    width: 25px;
-    height: 25px;
-    left: 85%;
-    animation-duration: 9s;
-    animation-delay: 2s;
-}
-
 @keyframes bubbleUp {
-    0% {
-        transform: translateY(0);
-        opacity: 0.8;
+    0% { transform: translateY(0); opacity: 0.8; }
+    100% { transform: translateY(-600px); opacity: 0; }
     }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-600px);
-        opacity: 0;
-    }
-}
