@@ -1,7 +1,7 @@
 /* Fondo */
 body {
     background-color: #e0f7fa; /* Azul claro de respaldo */
-    background-image: url('ruta/al/gif_del_mar.gif'); /* Reemplaza con la ruta de tu GIF */
+    background-image: url('under-the-sea-anime-fish.gif'); /* Reemplaza con la ruta de tu GIF */
     background-size: cover; /* Asegura que el GIF cubra toda la pantalla */
     background-position: center;
     background-repeat: no-repeat;
